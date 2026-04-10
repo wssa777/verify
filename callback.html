@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>TikTok Auth Callback</title></head>
+<body>
+<h2>Authorization Successful!</h2>
+<p>Copy the code from the URL and paste it in the bot.</p>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  if (code) {
+    document.body.innerHTML += '<h3>Your Code:</h3><p style="background:#f0f0f0;padding:10px;font-size:18px;">' + code + '</p>';
+  }
+</script>
+</body>
+</html>
